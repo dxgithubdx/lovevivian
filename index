@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>登录</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<style type="text/css">
+body {
+	background-color: #FFF;
+	background-image: url(img/1.jpg);
+	background-repeat: no-repeat;
+	color: #FFFFFF;
+}
+</style>
+<script>
+function r()
+{
+var username=document.getElementById("entry_name");
+var pass=document.getElementById("entry_password");
+if(username.value=="")
+{
+alert("请输入用户名");
+username.focus();
+return ;
+}
+else if(pass.value=="")
+{
+alert("请输入密码");
+return;
+}
+else if((pass.value=="ghsbear")&&(username.value=="vivian"))
+{
+window.location.href='happybirthday.html';
+}
+else
+{
+alert("登录失败，请检查用户名和密码是否有误！");
+return;
+}
+return true;
+}
+</script>
+</head>
+
+<body>
+<div id="container">
+	<div id="output">
+	  <div class="containerT">
+			<h1>用户登录</h1>
+			<form class="form" id="entry_form">
+				<input type="text" placeholder="用户名" id="entry_name">
+				<input type="password" placeholder="密码" id="entry_password">
+                <button type="button" id="entry_btn" onclick="r();">登录</button>
+                <input type="reset" value="重 置" id="entry_reset">
+				<div id="prompt" class="prompt"></div>
+		</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>
